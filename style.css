@@ -12,7 +12,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
-    line-height: 1.6; /* Slight increase for better readability at smaller font sizes */
+    line-height: 1.6;
     background-color: #0f2027;
 }
 
@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 40px; /* Refined padding */
+    padding: 12px 40px;
     background-color: #EBF3F9;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     position: sticky;
@@ -34,10 +34,10 @@ body {
     align-items: center;
 }
 
+/* FIX: Logo ki width fix kar di taaki image automatic sahi size mein dikhne lage */
 .logo-img {
-    height: auto;
+    height: 45px;
     width: auto;
-    max-height: 45px; /* Scaled down slightly from 60px to look sleeker */
     display: block;
 }
 
@@ -50,7 +50,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #1e293b;
-    font-size: 15px; /* Tuned down from 18px */
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.3px;
     transition: color 0.3s ease;
@@ -60,14 +60,13 @@ body {
     color: #00417A;
 }
 
-/* ---- Pure CSS Hamburger Menu Elements ---- */
-/* Laptop screen par checkbox aur hamburger button ko chupa kar rakhein */
+/* ---- Pure CSS Hamburger Menu Settings ---- */
 .menu-checkbox {
-    display: none;
+    display: none; /* Checkbox ko hamesha chupa kar rakhein */
 }
 
 .menu-toggle {
-    display: none;
+    display: none; /* Laptop par hamburger button nahi dikhega */
     font-size: 28px;
     color: #1e293b;
     cursor: pointer;
@@ -76,7 +75,7 @@ body {
 
 /* ===== 3. HERO SECTION ===== */
 .hero {
-    height: 65vh; /* Slightly reduced height */
+    height: 65vh;
     background-image: linear-gradient(rgba(15, 32, 39, 0.5), rgba(15, 32, 39, 0.6)), url("Gemini_Image.png");
     background-size: cover;
     background-position: center;
@@ -93,7 +92,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 42px; /* Scaled down from 50px */
+    font-size: 42px;
     margin-bottom: 18px;
     color: #ffffff;
     font-weight: 700;
@@ -101,7 +100,7 @@ body {
 }
 
 .hero-content p {
-    font-size: 16.5px; /* Tuned down from 20px */
+    font-size: 16.5px;
     margin-bottom: 28px;
     color: #f1f5f9;
     opacity: 0.95;
@@ -131,15 +130,15 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: #000000;    
-    padding: 70px 30px; /* Reduced vertical padding */
+    padding: 70px 30px;
     display: flex;
     justify-content: center;
 }
 
 .about-container {
     background-color: #ffffff;
-    padding: 40px 45px; /* Adjusted internal breathing room */
-    border-radius: 8px; /* Subtle radius matches the rest of your UI */
+    padding: 40px 45px;
+    border-radius: 8px;
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
@@ -153,14 +152,14 @@ body {
 }
 
 .about h2 {
-    font-size: 32px; /* Tuned down from 40px */
+    font-size: 32px;
     margin-bottom: 15px;
     color: #00417A;
     font-weight: 700;
 }
 
 .about p {
-    font-size: 15px; /* Tuned down from 18px to look sharper */
+    font-size: 15px;
     color: #334155; 
     line-height: 1.7;
 }
@@ -181,7 +180,7 @@ body {
 .point h3 {
     color: #00417A;
     margin-bottom: 6px;
-    font-size: 20px; /* Tuned down from 24px */
+    font-size: 20px;
 }
 
 .point p {
@@ -195,13 +194,13 @@ body {
     background-image: linear-gradient(rgba(15, 32, 39, 0.65), rgba(15, 32, 39, 0.65)), url("Gemini_Gen.png");
     background-size: cover;
     background-position: center;
-    padding: 75px 20px; /* Scaled back padding */
+    padding: 75px 20px;
     text-align: center;
 }
 
 .services h2 {
     color: #ffffff;
-    font-size: 32px; /* Tuned down from 40px */
+    font-size: 32px;
     margin-bottom: 40px;
     font-weight: 700;
 }
@@ -231,14 +230,14 @@ body {
 
 .service-card h3 {
     color: #1A5F7A;
-    font-size: 18px; /* Tuned down from 20px */
+    font-size: 18px;
     margin-bottom: 12px;
     font-weight: 700;
 }
 
 .service-card p {
     color: #475569;
-    font-size: 13.5px; /* Cleaned up text density */
+    font-size: 13.5px;
     line-height: 1.6;
 }
 
@@ -280,7 +279,7 @@ body {
 }
 
 .heritage-text h2 {
-    font-size: 30px; /* Balanced scale */
+    font-size: 30px;
     color: #00417A;
     margin-bottom: 15px;
     font-weight: 700;
@@ -343,14 +342,14 @@ body {
     background: #00417A; 
     border-radius: 8px;
     padding: 30px 20px;
-    width: 230px; /* Reduced from 260px */
+    width: 230px;
     color: #FFFFFF;
     box-shadow: 0 8px 20px rgba(0, 65, 122, 0.1);    
     transition: transform 0.3s ease;
 }
 
 .stat-box h3 {
-    font-size: 32px; /* Adjusted down from 36px */
+    font-size: 32px;
     margin: 0 0 6px 0;
     font-weight: 700;
 }
@@ -381,7 +380,7 @@ body {
 
 .careers > p {
     color: #475569;
-    font-size: 15.5px; /* Cleaned down from 18px */
+    font-size: 15.5px;
     margin-bottom: 35px;
 }
 
@@ -399,7 +398,7 @@ body {
     background-color: #FFFFFF;   
     border: 1px solid #E2E8F0;
     border-radius: 8px; 
-    padding: 30px 25px; /* Tighter padding values */
+    padding: 30px 25px;
     width: 280px;
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
@@ -408,7 +407,7 @@ body {
 
 .job-card h3 {
     color: #00417A; 
-    font-size: 18px; /* Balanced sizing */
+    font-size: 18px;
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -439,7 +438,7 @@ body {
 /* ===== 9. FOOTER / CONTACT SECTION ===== */
 .contact-section {
     background-color: #F4F8FA;
-    padding: 70px 20px 35px 20px; /* Reduced top spacing */
+    padding: 70px 20px 35px 20px;
     color: #333333;
 }
 
@@ -461,7 +460,7 @@ body {
 }
 
 .footer-info h2 {
-    font-size: 30px; /* Optimized scale */
+    font-size: 30px;
     margin-bottom: 6px;
     color: #00417A; 
     font-weight: 800;
@@ -486,7 +485,7 @@ body {
     align-items: center;
     gap: 16px;
     background-color: #ffffff; 
-    padding: 15px 20px; /* Made list components much sleeker */
+    padding: 15px 20px;
     border-radius: 8px;
     border: 1px solid #E2E8F0;
     box-shadow: 0 2px 8px rgba(0, 65, 122, 0.02);
@@ -499,7 +498,7 @@ body {
 }
 
 .icon-wrapper {
-    width: 38px; /* Perfectly downscaled indicators */
+    width: 38px;
     height: 38px;
     background-color: #EBF3F9; 
     border-radius: 50%;
@@ -538,7 +537,7 @@ body {
 }
 
 .card-link, .card-value {
-    font-size: 15px; /* Downsized cleanly from 18px */
+    font-size: 15px;
     font-weight: 600;
     color: #1E293B;
     text-decoration: none;
@@ -617,32 +616,32 @@ body {
         font-size: 32px;
     }
 
-    /* Navbar layout fixed for mobile layout positioning */
+    /* Navbar standard fix */
     .navbar {
         padding: 15px 30px;
         position: relative;
     }
 
-    /* Mobile par hamburger icon dikhne lagega */
+    /* Mobile par toggle text/button open karein */
     .menu-toggle {
         display: block;
     }
 
-    /* Nav links ko dropdown banaya aur shuruat mein hide kiya */
+    /* FIX: Nav links ko absolute position dekar hide kiya hai shuruat mein */
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #EBF3F9; /* Symmetrical background setup */
+        background-color: #EBF3F9; 
         position: absolute;
-        top: 100%;
+        top: 100%; /* Navbar ke thik neeche dropdown banega */
         left: 0;
         padding: 20px;
         gap: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
 
-    /* PURE CSS TRICK: Jab checkbox status checked hoga, tab dropdown open dikhega */
+    /* FIX & MAGIC: Jab user hamburger (☰) dabayega, checkbox check hoga aur dropdown menu display: flex (show) ho jayega. Phir se dabane par display: none (gayab) ho jayega */
     .menu-checkbox:checked ~ .nav-links {
         display: flex;
     }
