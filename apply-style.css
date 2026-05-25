@@ -1,0 +1,232 @@
+/* ===== 1. RESET AND BASE CONFIGURATION ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f2027;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 15px;
+}
+
+/* ===== 2. DISPLAY LAYOUT CARD ===== */
+.application-wrapper {
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+}
+
+.application-card {
+    background-color: #ffffff;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== 3. HEADER ZONE ===== */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 20px;
+}
+
+.role-badge {
+    display: inline-block;
+    color: #1A5F7A;
+    background-color: #EBF3F9;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.form-header h2 {
+    color: #00417A;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.form-header p {
+    color: #64748B;
+    font-size: 14px;
+    margin-top: 6px;
+    line-height: 1.6;
+}
+
+/* ===== 4. INFORMATIVE SECTION DIVIDERS ===== */
+.form-section-title {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #00417A;
+    background-color: #F1F5F9;
+    padding: 8px 14px;
+    border-left: 4px solid #1A5F7A;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 0 4px 4px 0;
+    text-align: left;
+}
+
+/* ===== 5. INPUT GROUP ELEMENT STYLES ===== */
+.app-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #475569;
+    text-align: left;
+}
+
+/* Input Fields styling */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group input[type="url"],
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #00417A;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 65, 122, 0.1);
+}
+
+/* ===== 6. SKILLS CHECKBOX GRID LAYOUT ===== */
+.skills-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    background-color: #F8FAFC;
+    padding: 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    margin-top: 4px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #00417A;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* ===== 7. FILE ZONE & NOTIFICATIONS ===== */
+.file-upload-zone {
+    background-color: #f1f5f9;
+    border: 2px dashed #94a3b8;
+    border-radius: 6px;
+    padding: 14px;
+    text-align: center;
+}
+
+.file-upload-zone input[type="file"] {
+    cursor: pointer;
+    font-size: 13.5px;
+    color: #475569;
+}
+
+.file-hint {
+    font-size: 11px;
+    color: #94A3B8;
+    margin-top: 6px;
+}
+
+/* ===== 8. CONTROL BUTTONS ===== */
+.submit-btn {
+    background-color: #00417A;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #002d54;
+}
+
+.home-link {
+    text-align: center;
+    text-decoration: none;
+    color: #64748B;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-top: 5px;
+    transition: color 0.2s ease;
+}
+
+.home-link:hover {
+    color: #00417A;
+}
+
+/* ===== 9. RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 650px) {
+    .form-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .skills-checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+    .application-card {
+        padding: 30px 20px;
+    }
+}
