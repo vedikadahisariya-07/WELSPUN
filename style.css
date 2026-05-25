@@ -60,6 +60,20 @@ body {
     color: #00417A;
 }
 
+/* ---- Pure CSS Hamburger Menu Elements ---- */
+/* Laptop screen par checkbox aur hamburger button ko chupa kar rakhein */
+.menu-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #1e293b;
+    cursor: pointer;
+    user-select: none;
+}
+
 /* ===== 3. HERO SECTION ===== */
 .hero {
     height: 65vh; /* Slightly reduced height */
@@ -603,16 +617,34 @@ body {
         font-size: 32px;
     }
 
+    /* Navbar layout fixed for mobile layout positioning */
     .navbar {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px;
+        padding: 15px 30px;
+        position: relative;
     }
 
+    /* Mobile par hamburger icon dikhne lagega */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Nav links ko dropdown banaya aur shuruat mein hide kiya */
     .nav-links {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        width: 100%;
+        background-color: #EBF3F9; /* Symmetrical background setup */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* PURE CSS TRICK: Jab checkbox status checked hoga, tab dropdown open dikhega */
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
     }
     
     .footer-container {
