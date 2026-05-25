@@ -600,6 +600,7 @@ body {
 @media (max-width: 1024px) {
     .service-container {
         flex-wrap: wrap;
+        justify-content: center;
     }
     .heritage-container {
         flex-direction: column;
@@ -610,64 +611,219 @@ body {
     }
 }
 
+/* MOBILE VIEW OPTIMIZATION (768px se niche sab perfectly small dikhega) */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
+    
+    /* 1. Navbar & Toggle Adjustments */
     .navbar {
-        padding: 15px 30px;
+        padding: 12px 20px;
         position: relative;
-        overflow: visible; /* Dropdown ko barfiye se bahar aane dega */
+        overflow: visible;
+    }
+    
+    .logo-img {
+        height: 38px; /* Mobile par logo slightly chota kiya */
     }
 
-    /* Mobile par sirf 3 lines (☰) dikhengi */
     .menu-toggle {
         display: block;
-        z-index: 102; /* Button hamesha upar rahega */
+        font-size: 26px;
+        z-index: 102;
     }
 
-    /* NAYA SLIDE-OUT DROPDOWN LAYOUT */
     .nav-links {
-        display: flex; /* Shuruat se flex rakhein taaki layout na bigde */
+        display: flex;
         flex-direction: column;
         width: 100%;
         background-color: #EBF3F9;
         position: absolute;
-        top: 100%; /* Navbar ke thik neeche */
+        top: 100%;
         left: 0;
-        padding: 25px;
-        gap: 20px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
         z-index: 101;
-        
-        /* SLIDE EFFECT CODE: Shuruat mein screen ke bahar dhakel diya aur opacity hide kar di */
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-20px); 
-        transition: all 0.4s ease-in-out; /* Yeh transition isey smooth sliding banayega */
+        transform: translateY(-15px); 
+        transition: all 0.35s ease-in-out;
     }
 
-    /* JAB 3 LINES VALA BUTTON DABAYEINGE: Dropdown smooth slide hokar niche aayega */
     .menu-checkbox:checked ~ .nav-links {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0); /* Apni sahi jagah par slide hokar aa jayega */
+        transform: translateY(0);
+    }
+
+    /* 2. Hero Section Fonts Scaling */
+    .hero {
+        height: auto;
+        padding: 60px 20px;
     }
     
+    .hero-content h1 {
+        font-size: 26px; /* 42px se ghatakar 26px kiya taaki screen se bahar na jaye */
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .hero-content p {
+        font-size: 14px; /* Text responsive adjustments */
+        margin-bottom: 20px;
+    }
+
+    /* 3. About Section Adjustments */
+    .about {
+        padding: 40px 15px;
+    }
+
+    .about-container {
+        padding: 25px 20px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .about-points {
+        margin-top: 25px;
+        gap: 20px;
+    }
+
+    .point h3 {
+        font-size: 18px;
+    }
+
+    /* 4. Services Grid Optimization */
+    .services {
+        padding: 40px 15px;
+    }
+
+    .services h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .service-card {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* 5. Global Scale / Heritage Optimization */
+    .heritage-section {
+        padding: 40px 20px;
+    }
+
+    .heritage-text h2 {
+        font-size: 24px;
+    }
+
+    /* 6. Sustainability Stats Optimization */
+    .sustainability {
+        padding: 40px 15px;
+    }
+
+    .sustainability h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .stats-container {
+        gap: 15px;
+    }
+
+    .stat-box {
+        width: 100%; /* Stats full screen width ke hisab se scale honge */
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .stat-box h3 {
+        font-size: 28px;
+    }
+
+    /* 7. Careers Section Scaling */
+    .careers {
+        padding: 40px 15px;
+    }
+
+    .careers h2 {
+        font-size: 24px;
+    }
+
+    .job-list {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .job-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    /* 8. Footer Section Compact Layout */
+    .contact-section {
+        padding: 40px 15px 20px 15px;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 35px;
+        gap: 30px;
     }
-    
+
+    .footer-info {
+        min-width: 100%;
+    }
+
+    .footer-info h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .contact-subtitle {
+        text-align: center;
+    }
+
+    .contact-card-item {
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    .card-link, .card-value {
+        font-size: 14px;
+    }
+
     .footer-links {
         width: 100%;
         text-align: center;
     }
-    
+
+    .footer-links h3 {
+        margin-bottom: 12px;
+    }
+
     .social-grid {
         justify-content: center;
+        gap: 8px;
+    }
+    
+    .social-btn {
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }
