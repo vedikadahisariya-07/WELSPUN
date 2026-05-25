@@ -34,7 +34,6 @@ body {
     align-items: center;
 }
 
-/* FIX: Logo ki width fix kar di taaki image automatic sahi size mein dikhne lage */
 .logo-img {
     height: 45px;
     width: auto;
@@ -62,11 +61,11 @@ body {
 
 /* ---- Pure CSS Hamburger Menu Settings ---- */
 .menu-checkbox {
-    display: none; /* Checkbox ko hamesha chupa kar rakhein */
+    display: none;
 }
 
 .menu-toggle {
-    display: none; /* Laptop par hamburger button nahi dikhega */
+    display: none;
     font-size: 28px;
     color: #1e293b;
     cursor: pointer;
@@ -616,34 +615,44 @@ body {
         font-size: 32px;
     }
 
-    /* Navbar standard fix */
     .navbar {
         padding: 15px 30px;
         position: relative;
+        overflow: visible; /* Dropdown ko barfiye se bahar aane dega */
     }
 
-    /* Mobile par toggle text/button open karein */
+    /* Mobile par sirf 3 lines (☰) dikhengi */
     .menu-toggle {
         display: block;
+        z-index: 102; /* Button hamesha upar rahega */
     }
 
-    /* FIX: Nav links ko absolute position dekar hide kiya hai shuruat mein */
+    /* NAYA SLIDE-OUT DROPDOWN LAYOUT */
     .nav-links {
-        display: none;
+        display: flex; /* Shuruat se flex rakhein taaki layout na bigde */
         flex-direction: column;
         width: 100%;
-        background-color: #EBF3F9; 
+        background-color: #EBF3F9;
         position: absolute;
-        top: 100%; /* Navbar ke thik neeche dropdown banega */
+        top: 100%; /* Navbar ke thik neeche */
         left: 0;
-        padding: 20px;
+        padding: 25px;
         gap: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+        z-index: 101;
+        
+        /* SLIDE EFFECT CODE: Shuruat mein screen ke bahar dhakel diya aur opacity hide kar di */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px); 
+        transition: all 0.4s ease-in-out; /* Yeh transition isey smooth sliding banayega */
     }
 
-    /* FIX & MAGIC: Jab user hamburger (☰) dabayega, checkbox check hoga aur dropdown menu display: flex (show) ho jayega. Phir se dabane par display: none (gayab) ho jayega */
+    /* JAB 3 LINES VALA BUTTON DABAYEINGE: Dropdown smooth slide hokar niche aayega */
     .menu-checkbox:checked ~ .nav-links {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Apni sahi jagah par slide hokar aa jayega */
     }
     
     .footer-container {
